@@ -4,7 +4,7 @@ A personal command center for concurrent agent work: research, company investiga
 
 ## Current state
 
-Phase 1 is the project foundation: this repository and its written context. The documents are prepared; placement in the permanent project directory is pending. No application code, dependencies, running services, or live integrations have been created here.
+Phase 1 is the project foundation: this repository and its written context. Phase 1 is complete, and the repository is at `/home/chrislazar/projects/vAltteri`. No application code, dependencies, running services, or live integrations have been created here.
 
 The name is `vAltteri`: capital `A`, lowercase `l`, inspired by Valtteri Bottas and the visual resemblance of `Al` to `AI` in a suitable typeface.
 
@@ -14,7 +14,7 @@ Read these files in order when starting a new conversation:
 2. [docs/plan.md](docs/plan.md) — agreed design, phases, and acceptance criteria.
 3. [docs/handoff.md](docs/handoff.md) — current progress, evidence, and next action.
 
-The next action is to finish Phase 1 repository placement. Then explain Phase 2 and wait for Chris's go-ahead before testing integrations.
+The next action is to explain Phase 2 and wait for Chris's go-ahead before testing integrations.
 
 ## Planned components
 

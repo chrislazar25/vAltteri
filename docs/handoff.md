@@ -4,12 +4,7 @@ Updated: 2026-09-05.
 
 ## Status and authorization
 
-Phase 1: documents and local Git repository prepared; permanent placement is pending.
-
-Current staging location: `/tmp/vaitteri-phase1.OimJp3`.
-Intended project location: `/home/chrislazar/projects/vAltteri`.
-
-The folder-copy permission request was interrupted before execution. A subsequent check confirmed that `/home/chrislazar/projects` had not been created. The copy helper was named “install,” but it only copies the repository and checks Git state; it does not install software. Phase 1 is not complete until placement is verified.
+Phase 1: complete. The documentation repository has been copied and verified at `/home/chrislazar/projects/vAltteri`. The Git working tree is clean, no remote is configured, and nothing has been pushed.
 
 Chris clarified the project name as `vAltteri` (capital `A`, lowercase `l`), inspired by Valtteri Bottas and the visual resemblance to `AI`. Use this spelling for the project. Keep the original draft's historical text and filename unchanged.
 
@@ -53,15 +48,13 @@ These are observations from the design conversation, not proof of a working inte
 
 ## Next action
 
-Finish Phase 1 by copying the prepared repository to the intended project location, verifying the copy and clean Git state, and updating this handoff and the README. The current session can write only in Downloads and temporary directories, so the copy requires filesystem approval or a session opened with the project directory writable. Do not repeat the interrupted copy request without explaining its purpose clearly. No remote is configured and nothing has been pushed.
-
 Explain Phase 2 to Chris before running probes. Cover the small task to use, the controls and usage signals to verify, the extension/service connection, and the evidence that would count as success. Answer questions and wait for his go-ahead.
 
 Keep the test bounded. Do not build the full task service, board, or coordinator during the integration probe. Record unsupported capabilities explicitly and explain any change that affects the intended experience.
 
 ## Starting a new conversation
 
-After permanent placement is complete, open the `vAltteri` project directory as the workspace and use:
+Open `/home/chrislazar/projects/vAltteri` as the workspace and use:
 
 > Read AGENTS.md, docs/plan.md, and docs/handoff.md. Phase 1 is complete. Explain Phase 2 and answer my questions; do not run integration tests or start implementing it until I give the go-ahead.
 
