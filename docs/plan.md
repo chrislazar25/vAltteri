@@ -1,6 +1,8 @@
-# Agreed design and build plan
+# vAltteri — agreed design and build plan
 
 Updated: 2026-09-05. Status: design agreed; Phase 1 foundation only.
+
+Project name: `vAltteri`, with a capital `A` and lowercase `l`. The original draft uses an earlier spelling and is preserved unchanged.
 
 ## Intended outcome
 

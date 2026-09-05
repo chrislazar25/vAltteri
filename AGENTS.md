@@ -1,4 +1,4 @@
-# Working on vAItteri
+# Working on vAltteri
 
 ## Start here
 
@@ -34,7 +34,7 @@ Chris is interested in stronger-model coordination and cheaper models for well-d
 
 Use a strong model for ambiguous architecture, difficult failures, integration decisions, and review. Delegate only bounded independent work when the active session permits it and it saves time or improves quality. Choose among models actually available in that session; do not assume model names or billing carry across tools.
 
-A delegated brief should state the objective, relevant context, allowed files, expected behavior, verification, and when to stop or escalate. Keep concurrent edits separate, inspect the result, and integrate it before declaring the phase complete. Build-time agents are separate from the workers vAItteri will eventually run.
+A delegated brief should state the objective, relevant context, allowed files, expected behavior, verification, and when to stop or escalate. Keep concurrent edits separate, inspect the result, and integrate it before declaring the phase complete. Build-time agents are separate from the workers vAltteri will eventually run.
 
 ## Repository hygiene and evidence
 
