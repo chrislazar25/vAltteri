@@ -20,7 +20,7 @@ Use vAltteri: capital A, lowercase l, inspired by Valtteri Bottas and the visual
 - Compared ACP usage with OpenCode's own session exports. Only sanitized [evidence](phase-2-evidence.json) is included with source; private artifacts are ignored under runtime/phase-2/.
 - Updated README, plan status, [results](phase-2-results.md), and [reproduction instructions](../probes/README.md).
 
-The code and documentation changes are local and uncommitted. No Git remote is configured and nothing has been published. No Slack/Notion actions or provider purchases were performed by this phase. Existing model defaults and automation definitions were not reconfigured; only the new diagnostic extension and probe conversations were created.
+At the final continuation, the Phase 2 files were already present in local commit b7b79f8, and an existing origin remote pointed to https://github.com/chrislazar25/vAltteri.git. The assistant did not create that commit, configure the remote, or push changes during this phase; remote publication state was not verified. Final README/handoff corrections are working-tree changes. No Slack/Notion actions or provider purchases were performed by this phase. Existing model defaults and automation definitions were not reconfigured; only the new diagnostic extension and probe conversations were created.
 
 ## Verified environment
 
