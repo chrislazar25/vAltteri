@@ -10,6 +10,7 @@ The two consequential findings are that interrupting a conversation did not stop
 
 ## Evidence
 
+- [Review walkthrough](phase-2-review.md) explains the code, traces one actual run, records build failures and their handling, and gives terminal/browser inspection steps.
 - [Sanitized machine-readable results](phase-2-evidence.json) contain the versions, run IDs, conversation IDs, terminal-state observations, and usage comparisons.
 - [Reproduction commands](../probes/README.md) use the current source and actual Agent Server APIs.
 - Ignored `runtime/phase-2/` holds private snapshots, fixture reports, event identifiers, and the browser screenshot. Full conversations remain in OpenHands/OpenCode.

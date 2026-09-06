@@ -16,7 +16,7 @@ Read these files in order when starting a new conversation:
 2. [docs/plan.md](docs/plan.md) — agreed design, phases, and acceptance criteria.
 3. [docs/handoff.md](docs/handoff.md) — current progress, evidence, and next action.
 
-Read the [Phase 2 results and capability matrix](docs/phase-2-results.md), [sanitized evidence](docs/phase-2-evidence.json), and [probe commands](probes/README.md). The next action is to discuss the tested constraints and explain Phase 3. Phase 3 requires a new explicit go-ahead.
+Start with the [Phase 2 review walkthrough](docs/phase-2-review.md) to see what was built, follow an actual run, and review failures and discoveries. The [results and capability matrix](docs/phase-2-results.md), [sanitized evidence](docs/phase-2-evidence.json), and [probe commands](probes/README.md) provide deeper detail. The next action is to discuss the tested constraints and explain Phase 3. Phase 3 requires a new explicit go-ahead.
 
 ## Planned components
 

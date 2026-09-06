@@ -6,7 +6,7 @@ Updated: 2026-09-05 (America/Chicago; Phase 2 evidence is timestamped September 
 
 Phases 1 and 2 are complete. Chris explicitly authorized Phase 2 with “go ahead” after the explanation, questions, and plain-text architecture diagrams. **Phase 3 is not authorized.** Stop at this boundary.
 
-The next conversation should review [Phase 2 results](phase-2-results.md), explain Phase 3, resolve the consequential control/accounting choices below, and wait for an explicit go-ahead. A casual acknowledgement does not authorize another phase.
+Chris asked for a concrete review of what was built, failures and fixes, and what we learned. Start with the [Phase 2 review walkthrough](phase-2-review.md), which connects the code to actual run records and distinguishes resolved build issues from remaining limitations. Let him review and ask questions before moving to the Phase 3 explanation. Phase 3 still requires an explicit go-ahead after the consequential control/accounting choices below are resolved. A casual acknowledgement does not authorize another phase.
 
 Use vAltteri: capital A, lowercase l, inspired by Valtteri Bottas and the visual resemblance to AI. Keep the historical draft's text and filename unchanged. Chris is using a terminal; Mermaid displayed as source, so use plain-text diagrams.
 
@@ -72,4 +72,4 @@ There is no full task service, SQLite task ledger, task board, coordinator, Slac
 
 ## Starting a new conversation
 
-> Read AGENTS.md, docs/plan.md, docs/handoff.md, and docs/phase-2-results.md. Phase 2 is complete. Explain Phase 3 and the stop/accounting decisions we need to resolve; answer my questions and wait for my explicit go-ahead before implementing it. Use plain-text diagrams because I am in a terminal.
+> Read AGENTS.md, docs/plan.md, docs/handoff.md, and docs/phase-2-review.md. Phase 2 is complete, and I want to review what was built, failures and fixes, evidence, and discoveries. Answer those questions first. Before any Phase 3 implementation, explain it and the stop/accounting decisions, then wait for my explicit go-ahead. Use plain-text diagrams because I am in a terminal.
