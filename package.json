@@ -1,0 +1,19 @@
+{
+  "name": "valtteri",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=24"
+  },
+  "scripts": {
+    "probe": "node probes/cli.ts",
+    "check": "tsc --noEmit",
+    "test:runtime": "node --test probes/connection.test.ts"
+  },
+  "devDependencies": {
+    "@types/node": "^26.4.1",
+    "playwright": "^1.63.0",
+    "typescript": "^7.0.2"
+  }
+}

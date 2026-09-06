@@ -1,6 +1,6 @@
 # vAltteri — agreed design and build plan
 
-Updated: 2026-09-05. Status: design agreed; Phase 1 foundation only.
+Updated: 2026-09-05. Status: Phases 1 and 2 complete; Phase 3 awaits explanation and authorization.
 
 Project name: `vAltteri`, with a capital `A` and lowercase `l`. The original draft uses an earlier spelling and is preserved unchanged.
 
@@ -71,6 +71,8 @@ Done when the repository is separate from Downloads, contains no runtime secrets
 Inspect actual running versions and available APIs. Verify a minimal Canvas extension can connect through the intended authenticated route. Exercise a small worker task through the available runtime: launch, observe, redirect, stop/resume, and inspect usage. Test OpenCode's proposed ACP integration. Record differences between native and ACP workers rather than assuming identical controls.
 
 Done when there is a concise capability matrix, reproducible evidence, and an explicit list of gaps. Resolve consequential integration constraints with Chris before building on them. Keep probe scope bounded and visible.
+
+Completed: see [Phase 2 results](phase-2-results.md). Native OpenHands and OpenCode ACP passed active steering and same-conversation interruption/resumption, and the Canvas extension connected to the authenticated local test service. Terminal processes survived agent interruption, and ACP token counts were incomplete compared with OpenCode session records. Carry these constraints into the Phase 3 discussion; a stronger stop guarantee and the accounting approach have not been chosen. The tested loopback service route also needs reachable authenticated routing for the planned phone workflow.
 
 ### 3. Task service and metrics
 

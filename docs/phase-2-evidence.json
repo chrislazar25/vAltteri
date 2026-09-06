@@ -1,0 +1,253 @@
+{
+  "recordedAt": "2026-09-06T01:24:45.962Z",
+  "phase": 2,
+  "versions": {
+    "canvasPackage": "1.16.0",
+    "agentServer": "1.44.0",
+    "sdk": "1.44.0",
+    "opencode": "1.15.13",
+    "node": "v24.16.0",
+    "browser": "153.0.8010.12"
+  },
+  "defaultProfilesUnchanged": true,
+  "connection": {
+    "authenticatedCanvasHelper": true,
+    "wrongTokenRejectedInBrowser": true,
+    "result": "Service: connected · Request a0683f4c-379c-4f22-b874-6256d42df686 · 2026-09-06T01:07:14.552Z"
+  },
+  "runs": [
+    {
+      "runId": "native-2026-09-06T01-08-56-717Z",
+      "conversationId": "4c51185c-ba9a-4c9f-a4f4-5a924ca6525f",
+      "worker": "native",
+      "mode": "interrupt",
+      "result": "failed",
+      "reportValid": null,
+      "finalStatus": "error",
+      "model": "openhands/claude-sonnet-4-6",
+      "startedAt": "2026-09-06T01:08:56.719Z",
+      "finishedAt": "2026-09-06T01:08:57.035Z",
+      "interruptResponseMs": null,
+      "toolContinuedWhilePaused": null,
+      "fixtureFinished": null,
+      "eventKinds": [
+        "SystemPromptEvent",
+        "MessageEvent",
+        "ConversationStateUpdateEvent",
+        "ConversationErrorEvent"
+      ],
+      "errorCodes": [
+        "LLMServiceUnavailableError"
+      ]
+    },
+    {
+      "runId": "native-2026-09-06T01-11-22-975Z",
+      "conversationId": "9c6c318f-664a-45cf-b12c-4bd69043b0ab",
+      "worker": "native",
+      "mode": "interrupt",
+      "result": "passed",
+      "reportValid": true,
+      "finalStatus": "finished",
+      "model": "openhands/claude-sonnet-4-6",
+      "startedAt": "2026-09-06T01:11:22.976Z",
+      "finishedAt": "2026-09-06T01:11:42.230Z",
+      "interruptResponseMs": 13,
+      "toolContinuedWhilePaused": true,
+      "fixtureFinished": true,
+      "eventKinds": [
+        "SystemPromptEvent",
+        "MessageEvent",
+        "ConversationStateUpdateEvent",
+        "ActionEvent",
+        "ObservationEvent",
+        "InterruptEvent"
+      ],
+      "errorCodes": []
+    },
+    {
+      "runId": "native-steer-2026-09-06T01-14-57-386Z",
+      "conversationId": "79b9cf01-507e-4191-a45f-327511e00a65",
+      "worker": "native",
+      "mode": "steer",
+      "result": "passed",
+      "reportValid": true,
+      "finalStatus": "finished",
+      "model": "openhands/claude-sonnet-4-6",
+      "startedAt": "2026-09-06T01:14:57.388Z",
+      "finishedAt": "2026-09-06T01:15:15.437Z",
+      "interruptResponseMs": null,
+      "toolContinuedWhilePaused": null,
+      "fixtureFinished": true,
+      "eventKinds": [
+        "SystemPromptEvent",
+        "MessageEvent",
+        "ConversationStateUpdateEvent",
+        "ActionEvent",
+        "ObservationEvent"
+      ],
+      "errorCodes": []
+    },
+    {
+      "runId": "opencode-2026-09-06T01-12-18-333Z",
+      "conversationId": "31040184-2672-4456-aa71-390afa620627",
+      "worker": "opencode",
+      "mode": "interrupt",
+      "result": "passed",
+      "reportValid": true,
+      "finalStatus": "finished",
+      "model": "opencode/claude-haiku-4-5",
+      "startedAt": "2026-09-06T01:12:18.334Z",
+      "finishedAt": "2026-09-06T01:12:45.205Z",
+      "interruptResponseMs": 2037,
+      "toolContinuedWhilePaused": true,
+      "fixtureFinished": true,
+      "eventKinds": [
+        "MessageEvent",
+        "ConversationStateUpdateEvent",
+        "SystemPromptEvent",
+        "ACPToolCallEvent",
+        "InterruptEvent",
+        "ActionEvent",
+        "ObservationEvent"
+      ],
+      "errorCodes": []
+    },
+    {
+      "runId": "opencode-steer-2026-09-06T01-14-58-508Z",
+      "conversationId": "d3d9419a-7e4a-40f8-8922-41ef66c58aec",
+      "worker": "opencode",
+      "mode": "steer",
+      "result": "passed",
+      "reportValid": true,
+      "finalStatus": "finished",
+      "model": "opencode/claude-haiku-4-5",
+      "startedAt": "2026-09-06T01:14:58.510Z",
+      "finishedAt": "2026-09-06T01:15:15.443Z",
+      "interruptResponseMs": null,
+      "toolContinuedWhilePaused": null,
+      "fixtureFinished": true,
+      "eventKinds": [
+        "MessageEvent",
+        "ConversationStateUpdateEvent",
+        "SystemPromptEvent",
+        "ACPToolCallEvent",
+        "ActionEvent",
+        "ObservationEvent"
+      ],
+      "errorCodes": []
+    }
+  ],
+  "usage": [
+    {
+      "runId": "native-2026-09-06T01-08-56-717Z",
+      "conversationId": "4c51185c-ba9a-4c9f-a4f4-5a924ca6525f",
+      "result": "failed",
+      "model": "openhands/claude-sonnet-4-6",
+      "sdkCostEstimateUSD": null,
+      "sdkReportedTokens": [],
+      "costStatus": "unavailable"
+    },
+    {
+      "runId": "native-2026-09-06T01-11-22-975Z",
+      "conversationId": "9c6c318f-664a-45cf-b12c-4bd69043b0ab",
+      "result": "passed",
+      "model": "openhands/claude-sonnet-4-6",
+      "sdkCostEstimateUSD": 0.050016,
+      "sdkReportedTokens": [
+        {
+          "model": "openhands/claude-sonnet-4-6",
+          "prompt_tokens": 38590,
+          "completion_tokens": 738,
+          "cache_read_tokens": 30655,
+          "cache_write_tokens": 7926,
+          "reasoning_tokens": 0,
+          "context_window": 1000000,
+          "per_turn_token": 8340,
+          "response_id": ""
+        }
+      ],
+      "costStatus": "estimated"
+    },
+    {
+      "runId": "native-steer-2026-09-06T01-14-57-386Z",
+      "conversationId": "79b9cf01-507e-4191-a45f-327511e00a65",
+      "result": "passed",
+      "model": "openhands/claude-sonnet-4-6",
+      "sdkCostEstimateUSD": 0.0520707,
+      "sdkReportedTokens": [
+        {
+          "model": "openhands/claude-sonnet-4-6",
+          "prompt_tokens": 38695,
+          "completion_tokens": 784,
+          "cache_read_tokens": 30374,
+          "cache_write_tokens": 8314,
+          "reasoning_tokens": 0,
+          "context_window": 1000000,
+          "per_turn_token": 8407,
+          "response_id": ""
+        }
+      ],
+      "costStatus": "estimated"
+    },
+    {
+      "runId": "opencode-2026-09-06T01-12-18-333Z",
+      "conversationId": "31040184-2672-4456-aa71-390afa620627",
+      "result": "passed",
+      "model": "opencode/claude-haiku-4-5",
+      "sdkCostEstimateUSD": 0.02356105,
+      "sdkReportedTokens": [
+        {
+          "model": "acp-managed",
+          "prompt_tokens": 10,
+          "completion_tokens": 61,
+          "cache_read_tokens": 16161,
+          "cache_write_tokens": 669,
+          "reasoning_tokens": 0,
+          "context_window": 200000,
+          "per_turn_token": 33,
+          "response_id": ""
+        }
+      ],
+      "costStatus": "estimated",
+      "openCodeCostEstimateUSD": 0.02356105,
+      "openCodeReportedTokens": {
+        "input": 50,
+        "output": 1419,
+        "reasoning": 0,
+        "cacheRead": 45373,
+        "cacheWrite": 9503
+      }
+    },
+    {
+      "runId": "opencode-steer-2026-09-06T01-14-58-508Z",
+      "conversationId": "d3d9419a-7e4a-40f8-8922-41ef66c58aec",
+      "result": "passed",
+      "model": "opencode/claude-haiku-4-5",
+      "sdkCostEstimateUSD": 0.021002299999999998,
+      "sdkReportedTokens": [
+        {
+          "model": "acp-managed",
+          "prompt_tokens": 10,
+          "completion_tokens": 49,
+          "cache_read_tokens": 15442,
+          "cache_write_tokens": 661,
+          "reasoning_tokens": 0,
+          "context_window": 200000,
+          "per_turn_token": 26,
+          "response_id": ""
+        }
+      ],
+      "costStatus": "estimated",
+      "openCodeCostEstimateUSD": 0.021002299999999998,
+      "openCodeReportedTokens": {
+        "input": 41,
+        "output": 1163,
+        "reasoning": 0,
+        "cacheRead": 36588,
+        "cacheWrite": 9190
+      }
+    }
+  ],
+  "estimatedRecordedCostUSD": 0.14665005,
+  "costNote": "Sum of available runtime estimates only; failed attempts with unavailable cost are not treated as zero. Provider billing was not independently audited. OpenCode exports corroborate cost estimates but expose more tokens than ACP reports."
+}

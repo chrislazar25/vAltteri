@@ -1,61 +1,75 @@
 # Current handoff
 
-Updated: 2026-09-05.
+Updated: 2026-09-05 (America/Chicago; Phase 2 evidence is timestamped September 6 UTC).
 
 ## Status and authorization
 
-Phase 1: complete. The documentation repository has been copied and verified at `/home/chrislazar/projects/vAltteri`. The Git working tree is clean, no remote is configured, and nothing has been pushed.
+Phases 1 and 2 are complete. Chris explicitly authorized Phase 2 with “go ahead” after the explanation, questions, and plain-text architecture diagrams. **Phase 3 is not authorized.** Stop at this boundary.
 
-Chris clarified the project name as `vAltteri` (capital `A`, lowercase `l`), inspired by Valtteri Bottas and the visual resemblance to `AI`. Use this spelling for the project. Keep the original draft's historical text and filename unchanged.
+The next conversation should review [Phase 2 results](phase-2-results.md), explain Phase 3, resolve the consequential control/accounting choices below, and wait for an explicit go-ahead. A casual acknowledgement does not authorize another phase.
 
-Chris approved Phase 1 after the seven-phase explanation. He explicitly wants each later phase explained and understood before authorizing its implementation. Phase 2 is not authorized yet.
+Use vAltteri: capital A, lowercase l, inspired by Valtteri Bottas and the visual resemblance to AI. Keep the historical draft's text and filename unchanged. Chris is using a terminal; Mermaid displayed as source, so use plain-text diagrams.
 
-No application code, dependency installation, runtime tests, provider purchases, Slack messages, Notion writes, or changes to existing automations have been performed in this foundation work.
+## What changed in Phase 2
 
-## What is in the repository
+- Added a small TypeScript probe kit under probes/, with package configuration and lockfile. It calls the existing Agent Server REST API; it is not a new agent harness or the Phase 3 task service.
+- Installed and enabled the repository's valtteri-connection Canvas extension. The page checks the Canvas authenticated HTTP helper and a separate loopback test service with a random token and explicit Origin/Host checks.
+- Verified the real Canvas page using an isolated Playwright Chromium session after the connected Browser tool reported no available browser. The test browser and its temporary service were closed afterward.
+- Exercised native OpenHands/Sonnet 4.6 and OpenCode/Zen Haiku 4.5. Both followed instructions sent during active work and resumed the same conversation with initial context intact after interruption.
+- Recorded five conversations: one immediate credential-resolution failure, two native successes, and two ACP successes. Their titles identify the vAltteri Phase 2 tests. Conversations are retained for inspection in their runtimes.
+- Compared ACP usage with OpenCode's own session exports. Only sanitized [evidence](phase-2-evidence.json) is included with source; private artifacts are ignored under runtime/phase-2/.
+- Updated README, plan status, [results](phase-2-results.md), and [reproduction instructions](../probes/README.md).
 
-- `README.md`: entry point and project status.
-- `AGENTS.md`: phase approval workflow, build guidance, and model/delegation preferences.
-- `docs/plan.md`: accepted design, metrics, budget, phases, and real-work acceptance scenarios.
-- `docs/reference/vaitteri-v2-architecture.md`: unchanged original draft, retained as historical context.
-- `.gitignore`: excludes secrets and runtime state.
+The code and documentation changes are local and uncommitted. No Git remote is configured and nothing has been published. No Slack/Notion actions or provider purchases were performed by this phase. Existing model defaults and automation definitions were not reconfigured; only the new diagnostic extension and probe conversations were created.
 
-## Validation
+## Verified environment
 
-- All six intended project files are present and relative Markdown links resolve.
-- The historical architecture draft is byte-for-byte identical to the original in Downloads.
-- Git ignore checks cover credentials, runtime files, SQLite/WAL/SHM files, and generated output while allowing source, migrations, lockfiles, and environment examples.
-- The local Git repository uses `main` with an initial documentation commit and no remote.
-- No application tests were applicable to this documentation-only phase.
+| Component | Evidence |
+|---|---|
+| Canvas package | 1.16.0; live frontend asset names matched the installed build |
+| Running Agent Server / SDK / tools / workspace | 1.44.0 from /server_info |
+| OpenCode | 1.15.13 from its executable |
+| Node | 24.16.0 |
+| Python reported by Agent Server | 3.12.3 |
+| UI test browser | Chromium 153.0.8010.12 through Playwright |
+| Addresses | Canvas http://127.0.0.1:8000; Agent Server http://127.0.0.1:18000 |
 
-No application dependencies or integrations have been verified by this phase. Preserve the distinction between the observations below and future runtime evidence.
+Canvas's launcher persists its Agent Server API key at ~/.openhands/agent-canvas/api-key.txt; the probe reads it in memory without printing it. The diagnostic service uses its own unrelated token. Never put either credential in Git or documentation.
 
-## Previously observed environment
+The live API schema is stored privately at runtime/phase-2/openapi.json. SDK 1.44.0 accepts both native and ACP creation on /api/conversations; older documentation's separate ACP route does not match this live schema.
 
-These are observations from the design conversation, not proof of a working integration. Recheck the relevant items during Phase 2.
+## Validation and evidence
 
-- Linux laptop; original working directory `/home/chrislazar/Downloads`.
-- Original design document: `/home/chrislazar/Downloads/vaitteri-v2-architecture.md`.
-- Agent Canvas package 1.16.0 at `/home/chrislazar/.nvm/versions/node/v24.16.0/lib/node_modules/@openhands/agent-canvas`.
-- Canvas `--info` reported ingress 8000, agent server 18000, automations 18001. Its default server versions are not evidence of the actual running versions.
-- Installed extension type definitions: `dist/types/canvas-extension.d.ts` inside that package. Custom pages and an authenticated agent-server HTTP helper were visible; that does not prove a route to our future service.
-- OpenCode 1.15.13 at `/home/chrislazar/.opencode/bin/opencode`; its documented ACP entry point is `opencode acp`. Canvas integration has not been exercised.
-- Codex is available on PATH. Claude Code was not on the inspected PATH; do not infer it is absent everywhere.
-- Node 24.16.0, Python 3.12.3, and uv were available. TypeScript was selected as the project default.
-- Existing OpenHands settings selected native `openhands` and model `openhands/claude-sonnet-4-6`. No credentials were recorded.
-- Existing automation state was found at `/home/chrislazar/.openhands/automation/automations.db`. Do not confuse it with this project's future task ledger.
-- The original draft describes eight Slack-oriented automations and broken ten-minute command polling. Their live behavior has not been audited in this repository.
+- npm run check: TypeScript validation passed.
+- npm run test:runtime: real HTTP authentication, Origin/Host, preflight, path, and method checks passed.
+- Real browser test: custom page mounted inside Canvas, authenticated Agent Server request succeeded, wrong service token returned 401, valid service request returned a UUID and timestamp. Screenshot is private at runtime/phase-2/canvas-connection.png.
+- Native and ACP worker reports exactly matched the expected priority counts and preserved the initial random marker after steering/resumption.
+- Final API checks: all five probe conversations inactive; every started fixture recorded exit; active native model and agent profile pointers matched the initial inventory.
+- Sanitized capability/usage evidence: [phase-2-evidence.json](phase-2-evidence.json). Individual private run files preserve failed/stopped observations, event IDs, and timing.
+- Repository hygiene checks cover source changes, ignored runtime files, Markdown links, whitespace, and unchanged historical reference. No application code beyond the authorized probe kit was added.
 
-## Next action
+## Usage and spend
 
-Explain Phase 2 to Chris before running probes. Cover the small task to use, the controls and usage signals to verify, the extension/service connection, and the evidence that would count as success. Answer questions and wait for his go-ahead.
+The sum of available runtime estimates is **$0.14665005** (about $0.147): native $0.10208670 and ACP $0.04456335. These are estimates, not independently audited provider charges. The first credential-resolution failure has no recorded token calls and an **unavailable** cost; do not silently convert that to measured zero.
 
-Keep the test bounded. Do not build the full task service, board, or coordinator during the integration probe. Record unsupported capabilities explicitly and explain any change that affects the intended experience.
+All runtime probe usage counts toward the shared **$10 incremental trial allowance**. No extra allowance was created for Phase 2. Build-session model usage is separate. No account purchases or changes to automatic reload settings were made. An exact dollar cutoff and provider-side spending controls remain unverified.
+
+## Consequential findings to discuss before Phase 3
+
+1. **Stopping:** /interrupt reached paused for both workers, but an existing terminal command kept updating its heartbeat. The fixture was explicitly released for cleanup before resumption. Current evidence supports pausing agent execution, not stopping every subprocess. Choose the intended user-facing promise and how stronger stopping will be achieved before implementing that control.
+2. **ACP accounting:** ACP estimated costs matched OpenCode exports, but output-token totals were 61 versus 1,419 for interrupt/resume and 49 versus 1,163 for active steering. Input/cache accounting differed too. Choose an additional OpenCode usage source or an explicitly incomplete display; do not treat ACP figures as complete totals.
+3. **Local service reachability:** the tested direct loopback route works on the laptop. Phone access needs reachable authenticated routing in Phase 6. Canvas's authenticated helper targets the Agent Server, not an arbitrary custom server.
+
+The first native attempt also established a launch detail: a provider-connection identifier alone did not hydrate credentials in a directly constructed agent. The successful bounded probe used the supported encrypted settings round-trip. Future profile launches can use server-side resolution; select the launch path when designing Phase 3 without copying credentials into the task ledger.
+
+Not tested: the separate graceful /pause endpoint, server/process restart recovery, full subprocess termination, worker permission gates, exact in-flight billing cancellation, phone routing, or provider spending controls. These gaps are explicit, not claims of working integration.
+
+## Current demo and cleanup state
+
+The diagnostic extension is installed and enabled at http://127.0.0.1:8000/extensions/valtteri-connection/check. No diagnostic test server is left running. For a manual demo, use npm run probe -- server, then enter the private token from runtime/phase-2/connection-token.txt in the page. Ctrl-C stops that server. See the [probe README](../probes/README.md) before running any paid worker test again.
+
+There is no full task service, SQLite task ledger, task board, coordinator, Slack replacement, or Notion integration yet. The existing automation database at ~/.openhands/automation/automations.db remains separate from the future ledger. Its strategy and behavior were not audited in this phase.
 
 ## Starting a new conversation
 
-Open `/home/chrislazar/projects/vAltteri` as the workspace and use:
-
-> Read AGENTS.md, docs/plan.md, and docs/handoff.md. Phase 1 is complete. Explain Phase 2 and answer my questions; do not run integration tests or start implementing it until I give the go-ahead.
-
-The documents are the durable project context. This transcript is not required to resume work.
+> Read AGENTS.md, docs/plan.md, docs/handoff.md, and docs/phase-2-results.md. Phase 2 is complete. Explain Phase 3 and the stop/accounting decisions we need to resolve; answer my questions and wait for my explicit go-ahead before implementing it. Use plain-text diagrams because I am in a terminal.

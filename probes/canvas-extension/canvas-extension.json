@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "name": "valtteri-connection",
+  "display_name": "vAltteri connection check",
+  "version": "0.1.0",
+  "description": "Phase 2 local connection diagnostic.",
+  "entrypoint": "extension.js",
+  "contributes": {
+    "pages": [{ "id": "check", "title": "vAltteri connection check", "path": "/check", "nav_label": "vAltteri check" }]
+  }
+}
